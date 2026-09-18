@@ -1,0 +1,10 @@
+# Data-parallel training on one or more machines (used for SD 1.5 and for
+# confidence computation / evaluation).  Machine count, process count and
+# rank are passed on the command line by scripts/common.sh.
+compute_environment: LOCAL_MACHINE
+distributed_type: MULTI_GPU
+mixed_precision: bf16
+downcast_bf16: 'no'
+rdzv_backend: static
+same_network: true
+use_cpu: false

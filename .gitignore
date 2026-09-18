@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Environments and editors
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+.DS_Store
+
+# Data, runs and outputs
+data/
+runs/
+eval/
+wandb/
+logs/
+*.log
+
+# Weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt

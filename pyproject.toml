@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semi-dpo"
+version = "1.0.0"
+description = "Learning from Noisy Preferences: A Semi-Supervised Learning Approach to Direct Preference Optimization (ICLR 2026)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.1",
+    "torchvision",
+    "diffusers>=0.25",
+    "transformers>=4.38",
+    "accelerate>=0.26",
+    "datasets>=2.16",
+    "peft>=0.8",
+    "numpy",
+    "Pillow",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+rewards = [
+    "clip @ git+https://github.com/openai/CLIP.git",
+    "image-reward",
+    "hpsv2",
+]
+logging = ["wandb", "tensorboard", "matplotlib"]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["semi_dpo"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["semi_dpo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
