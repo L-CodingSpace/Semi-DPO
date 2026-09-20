@@ -2,7 +2,11 @@
 
 Official code for **Learning from Noisy Preferences: A Semi-Supervised Learning Approach to Direct Preference Optimization** (ICLR 2026).
 
-<!-- TODO: add links to the paper (OpenReview / arXiv), project page and released checkpoints. -->
+Xinxin Liu, Ming Li, Zonglin Lyu, Yuzhang Shang, Chen Chen — University of Central Florida
+
+[Paper (arXiv)](https://arxiv.org/abs/2604.24952) · [OpenReview](https://openreview.net/forum?id=rRc04jyoAk) · [Project page](https://liming-ai.github.io/SemiDPO/)
+
+<!-- TODO: add links to the released checkpoints once they are public. -->
 
 Human preferences over images are multi-dimensional (composition, aesthetics, detail, text alignment), but
 preference datasets such as Pick-a-Pic record a single winner per pair. When the two images win on different
@@ -167,11 +171,10 @@ SDXL test models from `hf-internal-testing` on CPU in under a minute.
 
 ## Citation
 
-<!-- TODO: fill in the authors and the final bibliographic entry. -->
-
 ```bibtex
-@inproceedings{semidpo2026,
+@inproceedings{liu2026semidpo,
   title     = {Learning from Noisy Preferences: A Semi-Supervised Learning Approach to Direct Preference Optimization},
+  author    = {Liu, Xinxin and Li, Ming and Lyu, Zonglin and Shang, Yuzhang and Chen, Chen},
   booktitle = {International Conference on Learning Representations (ICLR)},
   year      = {2026}
 }
